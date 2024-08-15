@@ -1,0 +1,66 @@
+<section>
+  <div class="section-title">
+    <h2>Publications</h2>
+  </div>
+
+  <!-- toggle -->
+  <script>
+    function toggleHide(id) {
+      const element = document.getElementById(id);
+      if (element.style.display === 'none' || element.style.display === '') {
+        element.style.display = 'block';
+      } else {
+        element.style.display = 'none';
+      }
+    }
+  </script>
+
+  <ul class="paper-list">
+    <li class="paper-item">
+      <p>
+        <a class="button-link button-asplos" href="https://www.asplos-conference.org/asplos2024">ASPLOS'24</a>
+        <strong><a class="styled-link" href="https://dl.acm.org/doi/10.1145/3620666.3651385">GSCore: Efficient Radiance Field Rendering via Architectural Support for 3D Gaussian Splatting</a></strong>
+      </p>
+      <p><em>Junseo Lee</em>, Seokwon Lee, Jungi Lee, Junyong Park, Jaewoong Sim</p>
+      <p>Proc. of the 2024 International Conference on Architectural Support for Programming Languages and Operating Systems (<strong>ASPLOS</strong>), San Diego, CA, April 2024</p>
+      <p>
+      [<a class="styled-link" href="assets/pubs/asplos24-gscore.pdf">PDF</a>]
+      [<a class="styled-link" href="https://youtu.be/TByYGw837IU?si=LSLdNcbiMkEMRJWn">Lightning Talk</a>]
+      [<a class="styled-link" href="assets/pubs/asplos24-gscore-talk.pdf">Slides</a>]
+      [<a class="styled-link" href="assets/pubs/asplos24-gscore-poster.pdf">Poster</a>]
+      [<a class="styled-link" href="javascript:toggleHide('lee-asplos24')">BibTex</a>]
+      <!--bibtex-->
+      <pre id="lee-asplos24" class="bibtex" style>
+@inproceedings{lee-asplos24,
+  author    = {Lee, Junseo and Lee, Seokwon and Lee, Jungi and Park, Junyong and Sim, Jaewoong},
+  title     = {GSCore: Efficient Radiance Field Rendering via Architectural Support for 3D Gaussian Splatting},
+  year      = {2024},
+  booktitle = {Proceedings of the 2024 International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)}
+}</pre>
+      </p>
+    </li>
+
+    <li class="paper-item">
+      <p>
+        <a class="button-link button-isca" href="https://iscaconf.org/isca2023">ISCA-50</a>
+        <strong><a class="styled-link" href="https://dl.acm.org/doi/10.1145/3579371.3589056">NeuRex: A Case for Neural Rendering Acceleration</a></strong>
+      </p>
+      <p><em>Junseo Lee</em>, Kwanseok Choi, Jungi Lee, Seokwon Lee, Joonho Whangbo, Jaewoong Sim</p>
+      <p>Proc. of the 50th International Symposium on Computer Architecture (<strong>ISCA</strong>), Orlando, FL, June 2023</p>
+      <p>
+      [<a class="styled-link" href="assets/pubs/isca23-neurex.pdf">PDF</a>]
+      [<a class="styled-link" href="https://youtu.be/fz8NgBg4LGI?si=gaFR9ujAP1krPcJ7">Lightning Talk</a>]
+      [<a class="styled-link" href="assets/pubs/isca23-neurex-talk.pdf">Slides</a>]
+      [<a class="styled-link" href="javascript:toggleHide('lee-isca23')">BibTex</a>]
+      <!--bibtex-->
+      <pre id="lee-isca23" class="bibtex" style>
+@inproceedings{lee-isca23,
+  author    = {Lee, Junseo and Choi, Kwanseok and Lee, Jungi and Lee, Seokwon and Whangbo, Joonho and Sim, Jaewoong},
+  title     = {NeuRex: A Case for Neural Rendering Acceleration},
+  year      = {2023},
+  booktitle = {Proceedings of the 50th Annual International Symposium on Computer Architecture (ISCA)},
+}</pre>
+      </p>
+    </li>
+  </ul>
+</section>
