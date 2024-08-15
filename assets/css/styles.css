@@ -1,7 +1,7 @@
 /* Global styles */
 html {
   font-size: 16px;
-  font-family: 'DM Sans', 'Inter', sans-serif;
+  font-family: 'Public Sans', 'Inter', sans-serif;
   font-weight: 400;
 }
 
@@ -27,6 +27,7 @@ section {
   gap: 2em;
   align-items: baseline;
   border-bottom: 1px solid;
+  border-bottom-color: gray;
   margin-bottom: 1em;
 }
 
@@ -35,6 +36,7 @@ section {
   display: flex;
   align-items: start;
   border-bottom: 1px solid;
+  border-bottom-color: gray;
 }
 
 .header-image {
