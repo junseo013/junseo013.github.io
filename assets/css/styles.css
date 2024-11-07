@@ -99,15 +99,18 @@ section {
 }
 
 .button-isca {
-  background-color: #428bca;
+  /*background-color: #428bca*/;
+  background-color: #1975AE;
 }
 
 .button-asplos {
-  background-color: #009688;
+  /*background-color: #009688;*/
+  background-color: #9163AA;
 }
 
 .button-hpca {
-  background-color: #800080;
+  /*background-color: #800080;*/
+  background-color: #17445A;
 }
 
 /* BibTex*/
