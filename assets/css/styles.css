@@ -106,6 +106,10 @@ section {
   background-color: #009688;
 }
 
+.button-hpca {
+  background-color: #800080;
+}
+
 /* BibTex*/
 .bibtex {
   display: none;
