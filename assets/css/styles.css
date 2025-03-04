@@ -58,11 +58,23 @@ section {
   font-size: 18px;
   font-weight: 500;
   margin: auto 0;
+  position: relative;
+  padding-bottom: 2px;
 }
 
-/* Hover Effect */
-.top-bar nav a:hover {
-  text-decoration: underline;
+.top-bar nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.top-bar nav a:hover::after {
+  width: 100%;
 }
 
 .styled-link {
