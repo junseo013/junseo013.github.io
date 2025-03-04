@@ -202,6 +202,17 @@ section {
   border-color: #1565c0; /* Ensure border remains */
 }
 
+.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745; /* Changes background */
+  color: white; /* Changes text color */
+  border-color: #28a745; /* Ensure border remains */
+}
+
 /* Conferences */
 .button-isca {
   background-color: #428bca;
