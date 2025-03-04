@@ -82,6 +82,11 @@ section {
   text-decoration: none;
 }
 
+.styled-link:hover {
+  color: #205992;
+  text-decoration: underline;
+}
+
 .section-title {
   display: flex;
   gap: 2em;
@@ -158,6 +163,43 @@ section {
 
 .button-link:hover {
   opacity: 0.8;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 3px 8px;
+  font-size: 0.8rem;
+  line-height: 1;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  margin-top: 4px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+              border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn img {
+  height: 16px;
+  width: auto;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.btn-outline-primary {
+  color: #1565c0;
+  border-color: #1565c0;
+}
+
+.btn-outline-primary:hover {
+  background-color: #1565c0; /* Changes background */
+  color: white; /* Changes text color */
+  border-color: #1565c0; /* Ensure border remains */
 }
 
 /* Conferences */
