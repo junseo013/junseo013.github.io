@@ -306,6 +306,18 @@ section {
   .header-image {
     display: none;
   }
+
+  .paper-image {
+    display: none;
+  }
+
+  .paper-item {
+    gap: 0;
+  }
+
+  .paper-content {
+    margin-left: 0;
+  }
 }
 
 /* Modal Styles */
