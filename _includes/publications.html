@@ -3,95 +3,109 @@
     <h2>Publications</h2>
   </div>
 
+  <div id="imageModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
   <ul class="paper-list">
     <li class="paper-item">
-      <p>
-        <a class="button-link button-hpca" href="https://hpca-conf.org/2025">HPCA'25</a>
-        <strong>VR-Pipe: Streamlining Hardware Graphics Pipeline for Volume Rendering</strong>
-      </p>
-      <p><em>Junseo Lee</em>, Jaisung Kim, Junyong Park, Jaewoong Sim</p>
-      <p>Proc. of the 31st International Symposium on High Performance Computer Architecture (<strong>HPCA</strong>), Las Vegas, NV, March 2025</p>
-      <p>
-      <a class="btn btn-outline-primary" href="assets/pubs/hpca25-vr-pipe.pdf">
-        <img src="/assets/images/icons/paper.png" alt="PDF"> PDF
-      </a>
-      <a class="btn btn-outline-success" href="assets/pubs/hpca25-vr-pipe-talk.pdf">
-        <img src="/assets/images/icons/slides.png" alt="Slides"> Slides
-      </a>
-      <!--[<a class="styled-link" href="https://youtu.be/TByYGw837IU?si=LSLdNcbiMkEMRJWn">Lightning Talk</a>]
-      [<a class="styled-link" href="assets/pubs/asplos24-gscore-poster.pdf">Poster</a>]
-      [<a class="styled-link" href="javascript:toggleHide('lee-asplos24')">BibTex</a>] -->
-      </p>
+      <img src="assets/images/papers/vr-pipe.pdf" alt="VR-Pipe" class="paper-image" onclick="openModal(this.src)">
+      <div class="paper-content">
+        <p>
+          <a class="button-link button-hpca" href="https://hpca-conf.org/2025">HPCA'25</a>
+          <strong>VR-Pipe: Streamlining Hardware Graphics Pipeline for Volume Rendering</strong>
+        </p>
+        <p><em>Junseo Lee</em>, Jaisung Kim, Junyong Park, Jaewoong Sim</p>
+        <p>Proc. of the 31st International Symposium on High Performance Computer Architecture (<strong>HPCA</strong>), Las Vegas, NV, March 2025</p>
+        <p>
+        <a class="btn btn-outline-primary" href="assets/pubs/hpca25-vr-pipe.pdf">
+          <img src="/assets/images/icons/paper.png" alt="PDF"> PDF
+        </a>
+        <a class="btn btn-outline-success" href="assets/pubs/hpca25-vr-pipe-talk.pdf">
+          <img src="/assets/images/icons/slides.png" alt="Slides"> Slides
+        </a>
+        <!--[<a class="styled-link" href="https://youtu.be/TByYGw837IU?si=LSLdNcbiMkEMRJWn">Lightning Talk</a>]
+        [<a class="styled-link" href="assets/pubs/asplos24-gscore-poster.pdf">Poster</a>]
+        [<a class="styled-link" href="javascript:toggleHide('lee-asplos24')">BibTex</a>] -->
+        </p>
+      </div>
     </li>
 
     <li class="paper-item">
-      <p>
-        <a class="button-link button-asplos" href="https://www.asplos-conference.org/asplos2024">ASPLOS'24</a>
-        <strong><a class="styled-link" href="https://dl.acm.org/doi/10.1145/3620666.3651385">GSCore: Efficient Radiance Field Rendering via Architectural Support for 3D Gaussian Splatting</a></strong>
-      </p>
-      <p><em>Junseo Lee</em>, Seokwon Lee, Jungi Lee, Junyong Park, Jaewoong Sim</p>
-      <p>Proc. of the 2024 International Conference on Architectural Support for Programming Languages and Operating Systems (<strong>ASPLOS</strong>), San Diego, CA, April 2024</p>
-      <p>
-      <a class="btn btn-outline-primary" href="/assets/pubs/asplos24-gscore.pdf">
-        <img src="/assets/images/icons/paper.png" alt="PDF"> PDF
-      </a>
-      <a class="btn btn-outline-success" href="https://www.youtube.com/watch?v=TByYGw837IU">
-        <img src="/assets/images/icons/youtube.png" alt="Youtube"> Lightning Talk
-      </a>
-      <a class="btn btn-outline-success" href="/assets/pubs/asplos24-gscore-talk.pdf">
-        <img src="/assets/images/icons/slides.png" alt="Slides"> Slides
-      </a>
-      <a class="btn btn-outline-success" href="/assets/pubs/asplos24-gscore-poster.pdf">
-        <img src="/assets/images/icons/poster.png" alt="Poster"> Poster
-      </a>
-      <a class="btn btn-outline-success" href="javascript:toggleHide('lee-asplos24')">
-        <img src="/assets/images/icons/bibtex.png" alt="BibTex"> BibTex
-      </a>
-      <div class="bibtex-container">
-        <button class="copy-button" data-bibtex-id="lee-asplos24" style="display: none;" onclick="copyBibtex('lee-asplos24')">Copy</button>
-        <pre id="lee-asplos24" class="bibtex">
+      <img src="assets/images/papers/gscore.pdf" alt="GSCore" class="paper-image" onclick="openModal(this.src)">
+      <div class="paper-content">
+        <p>
+          <a class="button-link button-asplos" href="https://www.asplos-conference.org/asplos2024">ASPLOS'24</a>
+          <strong><a class="styled-link" href="https://dl.acm.org/doi/10.1145/3620666.3651385">GSCore: Efficient Radiance Field Rendering via Architectural Support for 3D Gaussian Splatting</a></strong>
+        </p>
+        <p><em>Junseo Lee</em>, Seokwon Lee, Jungi Lee, Junyong Park, Jaewoong Sim</p>
+        <p>Proc. of the 2024 International Conference on Architectural Support for Programming Languages and Operating Systems (<strong>ASPLOS</strong>), San Diego, CA, April 2024</p>
+        <p>
+        <a class="btn btn-outline-primary" href="/assets/pubs/asplos24-gscore.pdf">
+          <img src="/assets/images/icons/paper.png" alt="PDF"> PDF
+        </a>
+        <a class="btn btn-outline-success" href="https://www.youtube.com/watch?v=TByYGw837IU">
+          <img src="/assets/images/icons/youtube.png" alt="Youtube"> Lightning Talk
+        </a>
+        <a class="btn btn-outline-success" href="/assets/pubs/asplos24-gscore-talk.pdf">
+          <img src="/assets/images/icons/slides.png" alt="Slides"> Slides
+        </a>
+        <a class="btn btn-outline-success" href="/assets/pubs/asplos24-gscore-poster.pdf">
+          <img src="/assets/images/icons/poster.png" alt="Poster"> Poster
+        </a>
+        <a class="btn btn-outline-success" href="javascript:toggleHide('lee-asplos24')">
+          <img src="/assets/images/icons/bibtex.png" alt="BibTex"> BibTex
+        </a>
+        <div class="bibtex-container">
+          <button class="copy-button" data-bibtex-id="lee-asplos24" style="display: none;" onclick="copyBibtex('lee-asplos24')">Copy</button>
+          <pre id="lee-asplos24" class="bibtex">
 @inproceedings{lee-asplos24,
   author    = {Lee, Junseo and Lee, Seokwon and Lee, Jungi and Park, Junyong and Sim, Jaewoong},
   title     = {GSCore: Efficient Radiance Field Rendering via Architectural Support for 3D Gaussian Splatting},
   year      = {2024},
   booktitle = {Proceedings of the 2024 International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)}
 }</pre>
+        </div>
+        </p>
       </div>
-      </p>
     </li>
 
     <li class="paper-item">
-      <p>
-        <a class="button-link button-isca" href="https://iscaconf.org/isca2023">ISCA-50</a>
-        <strong><a class="styled-link" href="https://dl.acm.org/doi/10.1145/3579371.3589056">NeuRex: A Case for Neural Rendering Acceleration</a></strong>
-      </p>
-      <p><em>Junseo Lee</em>, Kwanseok Choi, Jungi Lee, Seokwon Lee, Joonho Whangbo, Jaewoong Sim</p>
-      <p>Proc. of the 50th International Symposium on Computer Architecture (<strong>ISCA</strong>), Orlando, FL, June 2023</p>
-      <p>
-      <a class="btn btn-outline-primary" href="/assets/pubs/isca23-neurex.pdf">
-        <img src="/assets/images/icons/paper.png" alt="PDF"> PDF
-      </a>
-      <a class="btn btn-outline-success" href="https://youtu.be/fz8NgBg4LGI?si=gaFR9ujAP1krPcJ7">
-        <img src="/assets/images/icons/youtube.png" alt="Youtube"> Lightning Talk
-      </a>
-      <a class="btn btn-outline-success" href="/assets/pubs/isca23-neurex-talk.pdf">
-        <img src="/assets/images/icons/slides.png" alt="Slides"> Slides
-      </a>
-      <a class="btn btn-outline-success" href="javascript:toggleHide('lee-isca23')">
-        <img src="/assets/images/icons/bibtex.png" alt="BibTex"> BibTex
-      </a>
-      <!--bibtex-->
-      <div class="bibtex-container">
-        <button class="copy-button" data-bibtex-id="lee-isca23" style="display: none;" onclick="copyBibtex('lee-isca23')">Copy</button>
-        <pre id="lee-isca23" class="bibtex">
+      <img src="assets/images/papers/neurex.pdf" alt="NeuRex" class="paper-image" onclick="openModal(this.src)">
+      <div class="paper-content">
+        <p>
+          <a class="button-link button-isca" href="https://iscaconf.org/isca2023">ISCA-50</a>
+          <strong><a class="styled-link" href="https://dl.acm.org/doi/10.1145/3579371.3589056">NeuRex: A Case for Neural Rendering Acceleration</a></strong>
+        </p>
+        <p><em>Junseo Lee</em>, Kwanseok Choi, Jungi Lee, Seokwon Lee, Joonho Whangbo, Jaewoong Sim</p>
+        <p>Proc. of the 50th International Symposium on Computer Architecture (<strong>ISCA</strong>), Orlando, FL, June 2023</p>
+        <p>
+        <a class="btn btn-outline-primary" href="/assets/pubs/isca23-neurex.pdf">
+          <img src="/assets/images/icons/paper.png" alt="PDF"> PDF
+        </a>
+        <a class="btn btn-outline-success" href="https://youtu.be/fz8NgBg4LGI?si=gaFR9ujAP1krPcJ7">
+          <img src="/assets/images/icons/youtube.png" alt="Youtube"> Lightning Talk
+        </a>
+        <a class="btn btn-outline-success" href="/assets/pubs/isca23-neurex-talk.pdf">
+          <img src="/assets/images/icons/slides.png" alt="Slides"> Slides
+        </a>
+        <a class="btn btn-outline-success" href="javascript:toggleHide('lee-isca23')">
+          <img src="/assets/images/icons/bibtex.png" alt="BibTex"> BibTex
+        </a>
+        <!--bibtex-->
+        <div class="bibtex-container">
+          <button class="copy-button" data-bibtex-id="lee-isca23" style="display: none;" onclick="copyBibtex('lee-isca23')">Copy</button>
+          <pre id="lee-isca23" class="bibtex">
 @inproceedings{lee-isca23,
   author    = {Lee, Junseo and Choi, Kwanseok and Lee, Jungi and Lee, Seokwon and Whangbo, Joonho and Sim, Jaewoong},
   title     = {NeuRex: A Case for Neural Rendering Acceleration},
   year      = {2023},
   booktitle = {Proceedings of the 50th Annual International Symposium on Computer Architecture (ISCA)}
 }</pre>
+        </div>
+        </p>
       </div>
-      </p>
     </li>
   </ul>
 
