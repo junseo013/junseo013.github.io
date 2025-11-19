@@ -10,6 +10,18 @@
 
   <ul class="paper-list">
     <li class="paper-item">
+      <!-- <img src="assets/images/papers/vr-pipe.png" alt="GRTX" class="paper-image" onclick="openModal(this.src)"> -->
+      <div class="paper-content">
+        <p>
+          <a class="button-link button-hpca" href="https://conf.researchr.org/home/hpca-2026">HPCA'26</a>
+          <strong>GRTX: Efficient Ray Tracing for 3D Gaussian-Based Rendering</strong>
+        </p>
+        <p><em>Junseo Lee</em>, Sangyun Jeon, Jungi Lee, Junyong Park, Jaewoong Sim</p>
+        <p>Proc. of the 32nd International Symposium on High-Performance Computer Architecture (<strong>HPCA</strong>), Sydney, Australia, Jan/Feb 2026</p>
+      </div>
+    </li>
+
+    <li class="paper-item">
       <img src="assets/images/papers/vr-pipe.png" alt="VR-Pipe" class="paper-image" onclick="openModal(this.src)">
       <div class="paper-content">
         <p>
@@ -17,7 +29,7 @@
           <strong><a class="styled-link" href="https://arxiv.org/abs/2502.17078">VR-Pipe: Streamlining Hardware Graphics Pipeline for Volume Rendering</a></strong>
         </p>
         <p><em>Junseo Lee</em>, Jaisung Kim, Junyong Park, Jaewoong Sim</p>
-        <p>Proc. of the 31st International Symposium on High Performance Computer Architecture (<strong>HPCA</strong>), Las Vegas, NV, March 2025</p>
+        <p>Proc. of the 31st International Symposium on High-Performance Computer Architecture (<strong>HPCA</strong>), Las Vegas, NV, March 2025</p>
         <p>
         <a class="btn btn-outline-primary" href="assets/pubs/hpca25-vr-pipe.pdf">
           <img src="/assets/images/icons/paper.png" alt="PDF"> PDF
@@ -25,6 +37,19 @@
         <a class="btn btn-outline-success" href="assets/pubs/hpca25-vr-pipe-talk.pdf">
           <img src="/assets/images/icons/slides.png" alt="Slides"> Slides
         </a>
+        <a class="btn btn-outline-success" href="javascript:toggleHide('lee-hpca25')">
+          <img src="/assets/images/icons/bibtex.png" alt="BibTex"> BibTex
+        </a>
+        <div class="bibtex-container">
+          <button class="copy-button" data-bibtex-id="lee-hpca25" style="display: none;" onclick="copyBibtex('lee-hpca25')">Copy</button>
+          <pre id="lee-hpca25" class="bibtex">
+@inproceedings{lee-hpca25,
+  author    = {Lee, Junseo and Kim, Jaisung and Park, Junyong and Sim, Jaewoong},
+  title     = {VR-Pipe: Streamlining Hardware Graphics Pipeline for Volume Rendering},
+  year      = {2025},
+  booktitle = {Proceedings of the 31st IEEE International Symposium on High-Performance Computer Architecture (HPCA)}
+}</pre>
+        </div>
         <!--[<a class="styled-link" href="https://youtu.be/TByYGw837IU?si=LSLdNcbiMkEMRJWn">Lightning Talk</a>]
         [<a class="styled-link" href="assets/pubs/asplos24-gscore-poster.pdf">Poster</a>]
         [<a class="styled-link" href="javascript:toggleHide('lee-asplos24')">BibTex</a>] -->
