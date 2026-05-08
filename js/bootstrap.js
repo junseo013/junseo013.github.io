@@ -57,7 +57,24 @@ function openModal(imgSrc) {
   modalImg.src = imgSrc;
 }
 
-// Initialize modal when DOM is loaded
+// Initialize modal and scroll animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
   initializeModal();
+
+  // Scroll fade-in animation
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 });
