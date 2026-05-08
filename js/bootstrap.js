@@ -77,4 +77,29 @@ document.addEventListener('DOMContentLoaded', function() {
   }, observerOptions);
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Scroll spy for active nav link
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.top-bar nav a');
+
+  function updateActiveNav() {
+    const scrollPos = window.scrollY + 100;
+    let currentSection = '';
+
+    sections.forEach(section => {
+      if (section.offsetTop <= scrollPos) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + currentSection) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav);
+  updateActiveNav();
 });

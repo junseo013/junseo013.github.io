@@ -80,7 +80,8 @@ section {
   transition: width 0.3s ease;
 }
 
-.top-bar nav a:hover::after {
+.top-bar nav a:hover::after,
+.top-bar nav a.active::after {
   width: 100%;
 }
 
@@ -243,6 +244,7 @@ section {
   text-decoration: none;
   vertical-align: bottom;
   padding: 0.2em 0.6em;
+  margin-right: 0.3em;
   border-radius: 4px;
   white-space: nowrap;
 }
@@ -488,4 +490,117 @@ section {
 
 .paper-image {
   cursor: pointer;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #e2e8f0;
+  }
+
+  .top-bar {
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  .header-container {
+    border-bottom-color: #333;
+  }
+
+  .header-content h2 {
+    color: #f0f0f0;
+  }
+
+  .header-info {
+    color: #a0aec0;
+  }
+
+  .header-info a.styled-link {
+    color: #a0aec0;
+  }
+
+  .header-info a.styled-link:hover {
+    color: #63b3ed;
+  }
+
+  .header-image img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .styled-link {
+    color: #63b3ed;
+  }
+
+  .styled-link:hover {
+    color: #90cdf4;
+  }
+
+  .section-title {
+    border-bottom-color: #333;
+  }
+
+  .section-title h2 {
+    color: #f0f0f0;
+  }
+
+  .about strong {
+    color: #f0f0f0;
+  }
+
+  .paper-item {
+    background: #242424;
+    border-color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .paper-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .paper-image {
+    background-color: #2d2d2d;
+  }
+
+  .btn-outline-primary {
+    color: #e2e8f0;
+    border-color: #e2e8f0;
+  }
+
+  .btn-outline-primary:hover {
+    background-color: #4a5568;
+    border-color: #4a5568;
+    color: white;
+  }
+
+  .btn-outline-success {
+    color: #e2e8f0;
+    border-color: #e2e8f0;
+  }
+
+  .btn-outline-success:hover {
+    background-color: #4a5568;
+    border-color: #4a5568;
+    color: white;
+  }
+
+  .bibtex {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #e2e8f0;
+  }
+
+  .copy-button {
+    background-color: #333;
+    border-color: #444;
+    color: #e2e8f0;
+  }
+
+  .copy-button:hover {
+    background-color: #444;
+  }
+
+  .site-footer {
+    border-top-color: #333;
+    color: #666;
+  }
 }
