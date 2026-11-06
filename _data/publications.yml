@@ -1,0 +1,110 @@
+# Publications, newest first. Add a new paper by copying an entry to the top.
+#
+# id:          unique key, used for the BibTeX toggle (e.g. lee-isca27)
+# venue:       badge text (e.g. "HPCA'26")
+# venue_class: badge color, defined in assets/css/styles.css as .button-<venue_class>
+#              (unknown values fall back to gray)
+# venue_url:   conference website
+# title / url: paper title and link (arXiv, ACM DL, IEEE Xplore, ...)
+# authors:     "Junseo Lee" is emphasized automatically
+# proceedings: venue line shown under the authors (HTML allowed)
+# links:       buttons shown below; type is one of pdf, slides, video, poster
+# bibtex:      pasted as-is
+
+- id: lee-hpca27
+  venue: "HPCA'27"
+  venue_class: hpca
+  venue_url: https://conf.researchr.org/home/hpca-2027
+  title: "BlendCore: Architectural Support for High-Throughput Programmable Blending"
+  authors: Junseo Lee, Wonjae Jang, Sangyun Jeon, Jaewoong Sim
+  proceedings: Proc. of the 33rd International Symposium on High-Performance Computer Architecture (<strong>HPCA</strong>), Salt Lake City, Utah, March 2027
+
+- id: lee-hpca26
+  venue: "HPCA'26"
+  venue_class: hpca
+  venue_url: https://conf.researchr.org/home/hpca-2026
+  title: "GRTX: Efficient Ray Tracing for 3D Gaussian-Based Rendering"
+  url: https://arxiv.org/abs/2601.20429
+  authors: Junseo Lee, Sangyun Jeon, Jungi Lee, Junyong Park, Jaewoong Sim
+  proceedings: Proc. of the 32nd International Symposium on High-Performance Computer Architecture (<strong>HPCA</strong>), Sydney, Australia, January 2026
+  links:
+    - type: pdf
+      url: /assets/pubs/hpca26-grtx.pdf
+    - type: slides
+      url: /assets/pubs/hpca26-grtx-talk.pdf
+  bibtex: |
+    @inproceedings{lee-hpca26,
+      author    = {Lee, Junseo and Jeon, Sangyun and Lee, Jungi and Park, Junyong and Sim, Jaewoong},
+      title     = {GRTX: Efficient Ray Tracing for 3D Gaussian-Based Rendering},
+      year      = {2026},
+      booktitle = {Proceedings of the 32nd IEEE International Symposium on High-Performance Computer Architecture (HPCA)}
+    }
+
+- id: lee-hpca25
+  venue: "HPCA'25"
+  venue_class: hpca
+  venue_url: https://hpca-conf.org/2025
+  title: "VR-Pipe: Streamlining Hardware Graphics Pipeline for Volume Rendering"
+  url: https://ieeexplore.ieee.org/document/10946717
+  authors: Junseo Lee, Jaisung Kim, Junyong Park, Jaewoong Sim
+  proceedings: Proc. of the 31st International Symposium on High-Performance Computer Architecture (<strong>HPCA</strong>), Las Vegas, NV, March 2025
+  links:
+    - type: pdf
+      url: /assets/pubs/hpca25-vr-pipe.pdf
+    - type: slides
+      url: /assets/pubs/hpca25-vr-pipe-talk.pdf
+  bibtex: |
+    @inproceedings{lee-hpca25,
+      author    = {Lee, Junseo and Kim, Jaisung and Park, Junyong and Sim, Jaewoong},
+      title     = {VR-Pipe: Streamlining Hardware Graphics Pipeline for Volume Rendering},
+      year      = {2025},
+      booktitle = {Proceedings of the 31st IEEE International Symposium on High-Performance Computer Architecture (HPCA)}
+    }
+
+- id: lee-asplos24
+  venue: "ASPLOS'24"
+  venue_class: asplos
+  venue_url: https://www.asplos-conference.org/asplos2024
+  title: "GSCore: Efficient Radiance Field Rendering via Architectural Support for 3D Gaussian Splatting"
+  url: https://dl.acm.org/doi/10.1145/3620666.3651385
+  authors: Junseo Lee, Seokwon Lee, Jungi Lee, Junyong Park, Jaewoong Sim
+  proceedings: Proc. of the 2024 International Conference on Architectural Support for Programming Languages and Operating Systems (<strong>ASPLOS</strong>), San Diego, CA, April 2024
+  links:
+    - type: pdf
+      url: /assets/pubs/asplos24-gscore.pdf
+    - type: video
+      url: https://www.youtube.com/watch?v=TByYGw837IU
+    - type: slides
+      url: /assets/pubs/asplos24-gscore-talk.pdf
+    - type: poster
+      url: /assets/pubs/asplos24-gscore-poster.pdf
+  bibtex: |
+    @inproceedings{lee-asplos24,
+      author    = {Lee, Junseo and Lee, Seokwon and Lee, Jungi and Park, Junyong and Sim, Jaewoong},
+      title     = {GSCore: Efficient Radiance Field Rendering via Architectural Support for 3D Gaussian Splatting},
+      year      = {2024},
+      booktitle = {Proceedings of the 2024 International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)}
+    }
+
+- id: lee-isca23
+  venue: ISCA-50
+  venue_class: isca
+  venue_url: https://iscaconf.org/isca2023
+  title: "NeuRex: A Case for Neural Rendering Acceleration"
+  url: https://dl.acm.org/doi/10.1145/3579371.3589056
+  authors: Junseo Lee, Kwanseok Choi, Jungi Lee, Seokwon Lee, Joonho Whangbo, Jaewoong Sim
+  proceedings: Proc. of the 50th International Symposium on Computer Architecture (<strong>ISCA</strong>), Orlando, FL, June 2023
+  links:
+    - type: pdf
+      url: /assets/pubs/isca23-neurex.pdf
+    - type: video
+      url: https://youtu.be/fz8NgBg4LGI?si=gaFR9ujAP1krPcJ7
+    - type: slides
+      url: /assets/pubs/isca23-neurex-talk.pdf
+  bibtex: |
+    @inproceedings{lee-isca23,
+      author    = {Lee, Junseo and Choi, Kwanseok and Lee, Jungi and Lee, Seokwon and Whangbo, Joonho and Sim, Jaewoong},
+      title     = {NeuRex: A Case for Neural Rendering Acceleration},
+      year      = {2023},
+      booktitle = {Proceedings of the 50th Annual International Symposium on Computer Architecture (ISCA)}
+    }

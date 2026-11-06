@@ -238,6 +238,7 @@ section {
 .button-link {
   display: inline-block;
   color: #fff;
+  background-color: #6b7280;
   font-size: 75%;
   font-weight: 600;
   letter-spacing: 0.02em;
