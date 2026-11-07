@@ -1,14 +1,12 @@
 function toggleHide(id) {
   const element = document.getElementById(id);
   const copyButton = document.querySelector(`[data-bibtex-id="${id}"]`);
+  const toggle = document.querySelector(`[aria-controls="${id}"]`);
+  const show = element.style.display === 'none' || element.style.display === '';
 
-  if (element.style.display === 'none' || element.style.display === '') {
-    element.style.display = 'block';
-    copyButton.style.display = 'block';
-  } else {
-    element.style.display = 'none';
-    copyButton.style.display = 'none';
-  }
+  element.style.display = show ? 'block' : 'none';
+  copyButton.style.display = show ? 'block' : 'none';
+  if (toggle) toggle.setAttribute('aria-expanded', show ? 'true' : 'false');
 }
 
 function copyBibtex(id) {
@@ -27,58 +25,8 @@ function copyBibtex(id) {
   });
 }
 
-// Modal functions
-function initializeModal() {
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImage");
-  const closeBtn = document.getElementsByClassName("modal-close")[0];
-
-  closeBtn.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  modal.onclick = function(event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  }
-
-  document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape") {
-      modal.style.display = "none";
-    }
-  });
-}
-
-function openModal(imgSrc) {
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImage");
-  modal.style.display = "block";
-  modalImg.src = imgSrc;
-}
-
-// Initialize modal and scroll animations when DOM is loaded
+// Scroll spy for active nav link
 document.addEventListener('DOMContentLoaded', function() {
-  initializeModal();
-
-  // Scroll fade-in animation
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  // Scroll spy for active nav link
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.top-bar nav a');
 
@@ -100,6 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  window.addEventListener('scroll', updateActiveNav);
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
   updateActiveNav();
 });

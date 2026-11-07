@@ -2,7 +2,7 @@
 #
 # id:          unique key, used for the BibTeX toggle (e.g. lee-isca27)
 # venue:       badge text (e.g. "HPCA'26")
-# venue_class: badge color, defined in assets/css/styles.css as .button-<venue_class>
+# venue_class: badge color, defined in assets/css/styles.css as .venue-<venue_class>
 #              (unknown values fall back to gray)
 # venue_url:   conference website
 # title / url: paper title and link (arXiv, ACM DL, IEEE Xplore, ...)

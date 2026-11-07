@@ -1,54 +1,39 @@
-<section id="publications" class="fade-in">
-  <div class="section-title">
-    <h2>Publications</h2>
-  </div>
-
-  <div id="imageModal" class="modal">
-    <span class="modal-close">&times;</span>
-    <img class="modal-content" id="modalImage">
-  </div>
+<section id="publications">
+  <h2>Publications</h2>
 
   <!-- Paper entries live in _data/publications.yml -->
-  <ul class="paper-list">
+  <ul class="pubs">
     {% for paper in site.data.publications %}
-    <li class="paper-item">
-      <div class="paper-content">
-        <p>
-          {% if paper.venue_url %}<a class="button-link button-{{ paper.venue_class }}" href="{{ paper.venue_url }}">{{ paper.venue }}</a>{% else %}<span class="button-link button-{{ paper.venue_class }}">{{ paper.venue }}</span>{% endif %}
-          <strong>{% if paper.url %}<a class="styled-link" href="{{ paper.url }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</strong>
-        </p>
-        {% if paper.authors %}<p>{{ paper.authors | replace: "Junseo Lee", "<em>Junseo Lee</em>" }}</p>{% endif %}
-        {% if paper.proceedings %}<p>{{ paper.proceedings }}</p>{% endif %}
+    <li class="pub">
+      <div class="pub-body">
+        <div class="pub-title">{% if paper.venue %}{% if paper.venue_url %}<a class="venue venue-{{ paper.venue_class }}" href="{{ paper.venue_url }}">{{ paper.venue }}</a>{% else %}<span class="venue venue-{{ paper.venue_class }}">{{ paper.venue }}</span>{% endif %}{% endif %}{% if paper.url %}<a href="{{ paper.url }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</div>
+        {% if paper.authors %}<div class="pub-authors">{{ paper.authors | replace: "Junseo Lee", "<span class='me'>Junseo Lee</span>" }}</div>{% endif %}
+        {% if paper.proceedings %}<div class="pub-venue">{{ paper.proceedings }}</div>{% endif %}
         {% if paper.links or paper.bibtex %}
-        <p>
+        <div class="pub-links">
         {% for link in paper.links %}
           {% case link.type %}
-            {% when "pdf" %}{% assign icon = "paper" %}{% assign label = "PDF" %}{% assign style = "btn-outline-primary" %}
-            {% when "slides" %}{% assign icon = "slides" %}{% assign label = "Slides" %}{% assign style = "btn-outline-success" %}
-            {% when "video" %}{% assign icon = "youtube" %}{% assign label = "Lightning Talk" %}{% assign style = "btn-outline-success" %}
-            {% when "poster" %}{% assign icon = "poster" %}{% assign label = "Poster" %}{% assign style = "btn-outline-success" %}
+            {% when "pdf" %}{% assign label = "PDF" %}
+            {% when "slides" %}{% assign label = "Slides" %}
+            {% when "video" %}{% assign label = "Lightning Talk" %}
+            {% when "poster" %}{% assign label = "Poster" %}
           {% endcase %}
-        <a class="btn {{ style }}" href="{{ link.url }}">
-          <img src="/assets/images/icons/{{ icon }}.png" alt="{{ label }}"> {{ link.label | default: label }}
-        </a>
+          <a href="{{ link.url }}">{{ link.label | default: label }}</a>
         {% endfor %}
         {% if paper.bibtex %}
-        <a class="btn btn-outline-success" href="javascript:toggleHide('{{ paper.id }}')">
-          <img src="/assets/images/icons/bibtex.png" alt="BibTex"> BibTex
-        </a>
+          <a href="#" role="button" onclick="toggleHide('{{ paper.id }}'); return false;" aria-expanded="false" aria-controls="{{ paper.id }}">BibTeX</a>
+        {% endif %}
+        </div>
+        {% if paper.bibtex %}
         <div class="bibtex-container">
-          <button class="copy-button" data-bibtex-id="{{ paper.id }}" style="display: none;" onclick="copyBibtex('{{ paper.id }}')">Copy</button>
+          <button type="button" class="copy-button" data-bibtex-id="{{ paper.id }}" style="display: none;" onclick="copyBibtex('{{ paper.id }}')">Copy</button>
           <pre id="{{ paper.id }}" class="bibtex">
 {{ paper.bibtex | strip | xml_escape }}</pre>
         </div>
         {% endif %}
-        </p>
         {% endif %}
       </div>
     </li>
     {% endfor %}
   </ul>
-
-  <!-- toggle -->
-  <script src="js/bootstrap.js"></script>
 </section>

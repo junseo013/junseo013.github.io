@@ -3,15 +3,18 @@
   {% include head.html %}
   <body>
     {% include top-bar.html %}
-    {% include header.html %}
-    <main>
-      {% include about.html %}
-      {% include publications.html %}
-      {% include education.html %}
-      {% include teaching.html %}
-    </main>
-    <footer class="site-footer">
-      &copy; 2026 Junseo Lee
-    </footer>
+    <div class="page">
+      {% include header.html %}
+      <main>
+        {% include about.html %}
+        {% include publications.html %}
+        {% include education.html %}
+        {% include teaching.html %}
+      </main>
+      <footer class="site-footer">
+        &copy; {{ site.time | date: "%Y" }} Junseo Lee &middot; Last updated {{ site.time | date: "%B %Y" }}
+      </footer>
+    </div>
+    <script src="/js/bootstrap.js"></script>
   </body>
 </html>
